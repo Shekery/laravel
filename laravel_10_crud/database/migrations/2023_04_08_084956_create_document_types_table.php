@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('DocumentTypes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('document_types', function (Blueprint $table) {
+            $table->id();
             $table->string('name')->nullable();
-            $table->integer('start_number');
+            $table->bigInteger('start_number');
+            $table->integer('type_traffic');
+            $table->bigInteger('id_design_name_doc');
+            $table->bigInteger('id_design_comment');
+            $table->integer('code_organization');
+            $table->string('instruct_file')->nullable();
+            $table->boolean('ability_to_clone')->nullable();
+            $table->boolean('ability_to_work')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('DocumentTypes');
+        Schema::dropIfExists('document_types');
     }
 };
