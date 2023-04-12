@@ -6,7 +6,7 @@
                 <h2> Просмотр типа документа</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('documenttypes.index') }}"> Назад</a>
+                <a class="btn btn-primary" href="{{ route('DocumentTypes.index') }}"> Назад</a>
             </div>
         </div>
     </div>

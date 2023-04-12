@@ -7,7 +7,7 @@
                 <h2>Типы документов</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('documenttypes.create') }}"> Создать тип документа</a>
+                <a class="btn btn-success" href="{{ route('DocumentTypes.create') }}"> Создать тип документа</a>
             </div>
         </div>
     </div>
@@ -46,9 +46,9 @@
                 <td>{{ $document_type->ability_to_clone }}</td>
                 <td>{{ $document_type->ability_to_work }}</td>
                 <td>
-                    <form action="{{ route('documenttypes.destroy',$document_type) }}" method="POST">
-                        <a class="btn btn-primary" href="{{ route('documenttypes.edit',$document_type) }}">Изменить</a>
-                        <a class="btn btn-info" href="{{ route('documenttypes.show',$document_type) }}">Открыть</a>
+                    <form action="{{ route('DocumentTypes.destroy',$document_type) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('DocumentTypes.edit',$document_type) }}">Изменить</a>
+                        <a class="btn btn-info" href="{{ route('DocumentTypes.show',$document_type) }}">Открыть</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Удалить</button>

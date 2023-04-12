@@ -7,7 +7,7 @@
                 <h2>Создание нового типа документа</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('documenttypes.index') }}"> Назад</a>
+                <a class="btn btn-primary" href="{{ route('DocumentTypes.index') }}"> Назад</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('documenttypes.store') }}" method="POST">
+    <form action="{{ route('DocumentTypes.store') }}" method="POST">
         @csrf
 
         <div class="row">

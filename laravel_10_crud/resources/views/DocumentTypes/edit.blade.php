@@ -7,7 +7,7 @@
                 <h2>Изменение типа документа</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('documenttypes.index') }}"> Назад</a>
+                <a class="btn btn-primary" href="{{ route('DocumentTypes.index') }}"> Назад</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('documenttypes.update', $documentType->id) }}" method="POST">
+    <form action="{{ route('DocumentTypes.update', $documentType->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -65,13 +65,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код организации:</strong>
-                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации" value="{{ $documentType->'code_organization' }}">
+                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации" value="{{ $documentType->code_organization }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Инструкция:</strong>
-                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция" value="{{ $documentType->'instruct_file' }}">
+                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция" value="{{ $documentType->instruct_file }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

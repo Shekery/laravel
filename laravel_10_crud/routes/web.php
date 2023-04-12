@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentTypesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('DocumentTypes', \App\Http\Controllers\DocumentTypesController::class);
-Route::get('/DocumentTypes/{documentType}', 'DocumentTypesController@show')->name('documentTypes.show');
-Route::get('/DocumentTypes/{documentType}/edit', 'DocumentTypesController@edit')->name('documentTypes.edit');
+Route::resource('DocumentTypes', DocumentTypesController::class);
 Route::get('/', function () {
     return view('welcome');
 });
