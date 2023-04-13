@@ -7,7 +7,7 @@
                 <h2>Изменение типа документа</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('DocumentTypes.index') }}"> Назад</a>
+                <a class="btn btn-primary" href="{{ route('documentTypes.index') }}"> Назад</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('DocumentTypes.update', $documentType->id) }}" method="POST">
+    <form action="{{ route('documentTypes.update', $documentType->id) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -31,13 +31,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Название:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Название" value="{{ $documentType->name }}">
+                    <input type="text" name="name" class="form-control" placeholder="Название"
+                           value="{{ $documentType->name }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Стартовый номер:</strong>
-                    <input type="number" class="form-control" name="start_number" placeholder="Стартовый номер" value="{{ $documentType->start_number }}">
+                    <input type="number" class="form-control" name="start_number" placeholder="Стартовый номер"
+                           value="{{ $documentType->start_number }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -53,25 +55,29 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код поля Тема:</strong>
-                    <input type="number" class="form-control" name="id_design_name_doc" placeholder="Код поля Тема" value="{{ $documentType->id_design_name_doc }}">
+                    <input type="number" class="form-control" name="id_design_name_doc" placeholder="Код поля Тема"
+                           value="{{ $documentType->id_design_name_doc }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код поля Текст:</strong>
-                    <input type="number" class="form-control" name="id_design_comment" placeholder="Код поля Текст" value="{{ $documentType->id_design_comment }}">
+                    <input type="number" class="form-control" name="id_design_comment" placeholder="Код поля Текст"
+                           value="{{ $documentType->id_design_comment }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код организации:</strong>
-                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации" value="{{ $documentType->code_organization }}">
+                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации"
+                           value="{{ $documentType->code_organization }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Инструкция:</strong>
-                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция" value="{{ $documentType->instruct_file }}">
+                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция"
+                           value="{{ $documentType->instruct_file }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

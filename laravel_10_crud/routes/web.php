@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('DocumentTypes', DocumentTypesController::class);
+Route::resource('documentTypes', DocumentTypesController::class);
 Route::get('/', function () {
     return view('welcome');
 });
