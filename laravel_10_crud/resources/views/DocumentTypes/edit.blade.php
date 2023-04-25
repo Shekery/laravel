@@ -31,62 +31,56 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Название:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Название"
-                           value="{{ $documentType->name }}">
+                    <input type="text" name="name" class="form-control" placeholder="Название" value="{{ $documentType->name }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Стартовый номер:</strong>
-                    <input type="number" class="form-control" name="start_number" placeholder="Стартовый номер"
-                           value="{{ $documentType->start_number }}">
+                    <input type="number" class="form-control" name="start_number" placeholder="Стартовый номер" value="{{ $documentType->start_number }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Тип трафика:</strong>
                     <select class="form-control" name="type_traffic">
-                        <option selected value="-1">Выберите</option>
-                        <option value="2">Последовательно</option>
-                        <option value="1">Параллельно</option>
+                        <option value="-1" @if($documentType->type_traffic == -1) selected @endif>Выберите</option>
+                        <option value="2" @if($documentType->type_traffic == 2) selected @endif>Последовательно</option>
+                        <option value="1" @if($documentType->type_traffic == 1) selected @endif>Параллельно</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код поля Тема:</strong>
-                    <input type="number" class="form-control" name="id_design_name_doc" placeholder="Код поля Тема"
-                           value="{{ $documentType->id_design_name_doc }}">
+                    <input type="number" class="form-control" name="id_design_name_doc" placeholder="Код поля Тема" value="{{ $documentType->id_design_name_doc }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код поля Текст:</strong>
-                    <input type="number" class="form-control" name="id_design_comment" placeholder="Код поля Текст"
-                           value="{{ $documentType->id_design_comment }}">
+                    <input type="number" class="form-control" name="id_design_comment" placeholder="Код поля Текст" value="{{ $documentType->id_design_comment }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код организации:</strong>
-                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации"
-                           value="{{ $documentType->code_organization }}">
+                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации" value="{{ $documentType->code_organization }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Инструкция:</strong>
-                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция"
-                           value="{{ $documentType->instruct_file }}">
+                    <input type="text" class="form-control" name="instruct_file" placeholder="Инструкция" value="{{ $documentType->instruct_file }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Возможность клонировать:</strong>
                     <select class="form-control" name="ability_to_clone">
-                        <option selected value="-1">Выберите</option>
-                        <option value="true">Да</option>
-                        <option value="false">Нет</option>
+                        <option value="-1" {{ $documentType->ability_to_clone === null ? 'selected' : '' }}>Выберите</option>
+                        <option value="1" {{ $documentType->ability_to_clone === 1 ? 'selected' : '' }}>Да</option>
+                        <option value="0" {{ $documentType->ability_to_clone === 0 ? 'selected' : '' }}>Нет</option>
                     </select>
                 </div>
             </div>
@@ -94,9 +88,9 @@
                 <div class="form-group">
                     <strong>Возможность добавить в работу:</strong>
                     <select class="form-control" name="ability_to_work">
-                        <option selected value="-1">Выберите</option>
-                        <option value="true">Да</option>
-                        <option value="false">Нет</option>
+                        <option value="-1" {{ $documentType->ability_to_work === null ? 'selected' : '' }}>Выберите</option>
+                        <option value="1" {{ $documentType->ability_to_work === 1 ? 'selected' : '' }}>Да</option>
+                        <option value="0" {{ $documentType->ability_to_work === 0 ? 'selected' : '' }}>Нет</option>
                     </select>
                 </div>
             </div>
