@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-
 use App\Models\documentTypes;
 use App\Http\Requests\StoredocumentTypesRequest;
 use App\Http\Requests\UpdatedocumentTypesRequest;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
-class documentTypesController extends Controller
+class DocumentTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $documentTypes = DocumentTypes::all();
         return view('documentTypes.index', compact('documentTypes'));
@@ -25,7 +24,7 @@ class documentTypesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('documentTypes.create');
     }
@@ -33,7 +32,7 @@ class documentTypesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoredocumentTypesRequest $request)
+    public function store(StoredocumentTypesRequest $request): RedirectResponse
     {
         DocumentTypes::create($request->all());
 
@@ -43,16 +42,15 @@ class documentTypesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DocumentTypes $documentType)
+    public function show(DocumentTypes $documentTypes): View|\Illuminate\Foundation\Application|Factory|Application
     {
-
-        return view('documentTypes.show', compact('documentType'));
+        return view('documentTypes.show', compact('documentTypes'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(DocumentTypes $documentType)
+    public function edit(DocumentTypes $documentType): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('documentTypes.edit', compact('documentType'));
     }
@@ -60,7 +58,7 @@ class documentTypesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatedocumentTypesRequest $request, DocumentTypes $documentType)
+    public function update(UpdatedocumentTypesRequest $request, DocumentTypes $documentType): RedirectResponse
     {
         $documentType->update($request->all());
 
@@ -70,7 +68,7 @@ class documentTypesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DocumentTypes $documentType)
+    public function destroy(DocumentTypes $documentType): RedirectResponse
     {
         $documentType->delete();
 

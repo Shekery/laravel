@@ -143,7 +143,7 @@ class DocumentTypesSeeder extends Seeder
                 'type_traffic' => $documentType[3],
                 'id_design_name_doc' => $documentType[4],
                 'id_design_comment' => $documentType[5],
-                'code_organization' => $documentType[6],
+                'organization_id' => $documentType[6],
                 'instruct_file' => $documentType[7],
                 'ability_to_clone' => $documentType[8],
                 'ability_to_work' => $documentType[9]

@@ -64,7 +64,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код организации:</strong>
-                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации">
+                    <input type="number" class="form-control" name="organization_id" placeholder="Код организации">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

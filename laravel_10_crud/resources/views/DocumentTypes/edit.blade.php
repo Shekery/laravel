@@ -44,9 +44,9 @@
                 <div class="form-group">
                     <strong>Тип трафика:</strong>
                     <select class="form-control" name="type_traffic">
-                        <option value="-1" @if($documentType->type_traffic == -1) selected @endif>Выберите</option>
-                        <option value="2" @if($documentType->type_traffic == 2) selected @endif>Последовательно</option>
-                        <option value="1" @if($documentType->type_traffic == 1) selected @endif>Параллельно</option>
+                        <option value="-1" {{ $documentType->type_traffic === -1 ? 'selected' : '' }}>Выберите</option>
+                        <option value="2" {{ $documentType->type_traffic === 2 ? 'selected' : '' }}>Последовательно</option>
+                        <option value="1" {{ $documentType->type_traffic === 1 ? 'selected' : '' }}>Параллельно</option>
                     </select>
                 </div>
             </div>
@@ -65,7 +65,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Код организации:</strong>
-                    <input type="number" class="form-control" name="code_organization" placeholder="Код организации" value="{{ $documentType->code_organization }}">
+                    <input type="number" class="form-control" name="organization_id" placeholder="Код организации" value="{{ $documentType->organization_id }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

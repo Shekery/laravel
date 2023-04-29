@@ -8,6 +8,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('documentTypes.create') }}"> Создать тип документа</a>
+                <a class="btn btn-primary" href="{{ route('welcome') }}"> Назад</a>
             </div>
         </div>
     </div>
@@ -41,14 +42,17 @@
                 <td>{{ $documentType->type_traffic }}</td>
                 <td>{{ $documentType->id_design_name_doc }}</td>
                 <td>{{ $documentType->id_design_comment }}</td>
-                <td>{{ $documentType->code_organization }}</td>
+                <td>
+                    {{ $documentType->organization_id }}
+                    <a class="btn btn-info" style="float: right" href="{{ route('organizations.show', ['organization' => $documentType]) }}">Открыть</a>
+                </td>
                 <td>{{ $documentType->instruct_file }}</td>
                 <td>{{ $documentType->ability_to_clone }}</td>
                 <td>{{ $documentType->ability_to_work }}</td>
                 <td>
                     <form action="{{ route('documentTypes.destroy',$documentType) }}" method="POST">
                         <a class="btn btn-primary" href="{{ route('documentTypes.edit',$documentType) }}">Изменить</a>
-                        <a class="btn btn-info" href="{{ route('documentTypes.show',$documentType) }}">Открыть</a>
+                        <a class="btn btn-info" href="{{ route('documentTemplates.show', ['documentTemplate' => $documentType]) }}">Открыть</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Удалить</button>

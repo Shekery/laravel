@@ -27,7 +27,7 @@ class UpdatedocumentTypesRequest extends FormRequest
             'type_traffic' => 'required',
             'id_design_name_doc' => 'required',
             'id_design_comment' => 'required',
-            'code_organization' => 'required',
+            'organization_id' => 'required',
             'instruct_file' => 'required',
             'ability_to_clone' => 'required',
             'ability_to_work' => 'required'

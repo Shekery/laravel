@@ -18,11 +18,14 @@ return new class extends Migration
             $table->integer('type_traffic');
             $table->bigInteger('id_design_name_doc');
             $table->bigInteger('id_design_comment');
-            $table->integer('code_organization');
+            $table->integer('organization_id');
             $table->string('instruct_file')->nullable();
             $table->boolean('ability_to_clone')->nullable();
             $table->boolean('ability_to_work')->nullable();
             $table->timestamps();
+
+            // Связь с таблицей organizations
+            $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }
 
