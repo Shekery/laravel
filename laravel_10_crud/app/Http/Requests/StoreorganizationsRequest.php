@@ -23,7 +23,7 @@ class StoreorganizationsRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'abbreviation' => 'required'
+            'abbreviation'
         ];
     }
 }

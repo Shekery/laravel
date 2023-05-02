@@ -31,9 +31,6 @@
                 <td>{{ $columnType->type_input }}</td>
                 <td>{{ $columnType->select_options }}</td>
                 <td>{{ $columnType->div_row_classes }}</td>
-                <td>
-                    <a class="btn btn-info" href="{{ route('documentTemplateUserRelations.show',['documentTemplateUserRelation' => $columnType]) }}">Открыть</a>
-                </td>
             </tr>
         @endforeach
     </table>

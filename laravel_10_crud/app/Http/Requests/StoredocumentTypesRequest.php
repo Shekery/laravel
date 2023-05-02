@@ -23,12 +23,12 @@ class StoredocumentTypesRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'start_number' => 'required',
+            'start_number',
             'type_traffic' => 'required',
-            'id_design_name_doc' => 'required',
-            'id_design_comment' => 'required',
+            'id_design_name_doc',
+            'id_design_comment',
             'organization_id' => 'required',
-            'instruct_file' => 'required',
+            'instruct_file',
             'ability_to_clone' => 'required',
             'ability_to_work' => 'required'
         ];

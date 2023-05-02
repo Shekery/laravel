@@ -26,19 +26,19 @@ Route::resource('documentTypes', DocumentTypesController::class);
 Route::resource('columnTypes', ColumnTypesController::class);
 
 Route::resource('documentTemplates', DocumentTemplatesController::class);
-Route::get('documentTemplates/create_with_id/{document_type_id}', '\App\Http\Controllers\DocumentTemplatesController@create_with_id')->name('documentTemplates.create_with_id');
+Route::get('documentTemplates/create_with_id/{document_type_id}', [DocumentTemplatesController::class, 'create_with_id'])->name('documentTemplates.create_with_id');
 
 Route::resource('documentTemplateColumns', DocumentTemplateColumnsController::class);
-Route::get('documentTemplateColumns/create_with_id/{document_template_id}', '\App\Http\Controllers\DocumentTemplateColumnsController@create_with_id')->name('documentTemplateColumns.create_with_id');
+Route::get('documentTemplateColumns/create_with_id/{document_template_id}', [DocumentTemplateColumnsController::class, 'create_with_id'])->name('documentTemplateColumns.create_with_id');
 
 Route::resource('documentTemplateFiles', DocumentTemplateFilesController::class);
-Route::get('documentTemplateFiles/create_with_id/{document_template_id}', '\App\Http\Controllers\DocumentTemplateFilesController@create_with_id')->name('documentTemplateFiles.create_with_id');
+Route::get('documentTemplateFiles/create_with_id/{document_template_id}', [DocumentTemplateFilesController::class, 'create_with_id'])->name('documentTemplateFiles.create_with_id');
 
 Route::resource('documentTemplateUsers', DocumentTemplateUsersController::class);
-Route::get('documentTemplateUsers/create_with_id/{document_template_id}', '\App\Http\Controllers\DocumentTemplateUsersController@create_with_id')->name('documentTemplateUsers.create_with_id');
+Route::get('documentTemplateUsers/create_with_id/{document_template_id}', [DocumentTemplateUsersController::class, 'create_with_id'])->name('documentTemplateUsers.create_with_id');
 
 Route::resource('documentTemplateUserRelations', DocumentTemplateUserRelationsController::class);
-Route::get('documentTemplateUserRelations/create_with_id/{document_templates_user_id}', '\App\Http\Controllers\DocumentTemplateUserRelationsController@create_with_id')->name('documentTemplateUserRelations.create_with_id');
+Route::get('documentTemplateUserRelations/create_with_id/{document_templates_user_id}', [DocumentTemplateUserRelationsController::class, 'create_with_id'])->name('documentTemplateUserRelations.create_with_id');
 
 Route::get('/welcome', function () {
     return view('welcome');

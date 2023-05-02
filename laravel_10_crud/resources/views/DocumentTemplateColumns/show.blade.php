@@ -36,7 +36,6 @@
                 <td>{{ $documentTemplateColumn->required }}</td>
                 <td>
                     <form action="{{ route('documentTemplateColumns.destroy', $documentTemplateColumn) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('documentTemplateUserRelations.show',['documentTemplateUserRelation' => $documentTemplateColumn]) }}">Открыть</a>
                     <a class="btn btn-primary" href="{{ route('documentTemplateColumns.edit', $documentTemplateColumn) }}">Изменить</a>
                     @csrf
                     @method('DELETE')

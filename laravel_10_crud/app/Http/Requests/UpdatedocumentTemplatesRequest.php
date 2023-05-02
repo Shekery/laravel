@@ -23,7 +23,7 @@ class UpdatedocumentTemplatesRequest extends FormRequest
     {
         return [
             'document_type_id' => 'required',
-            'name' => 'required',
+            'name',
             'sort' => 'required',
             'prefix_table' => 'required'
         ];

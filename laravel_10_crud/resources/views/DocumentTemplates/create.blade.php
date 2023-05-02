@@ -7,7 +7,7 @@
                 <h2>Создание записи в шаблон документа</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('documentTemplates.index') }}"> Назад</a>
+                <a class="btn btn-primary" href="{{ route('documentTemplates.show', $document_type_id) }}"> Назад</a>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Наименование поля:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Название" value="">
+                    <input type="text" name="name" class="form-control" placeholder="Название">
                 </div>
             </div>
 

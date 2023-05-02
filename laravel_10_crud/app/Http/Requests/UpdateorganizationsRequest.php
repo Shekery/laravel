@@ -23,7 +23,7 @@ class UpdateorganizationsRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'abbreviation' => 'required'
+            'abbreviation'
         ];
     }
 }
